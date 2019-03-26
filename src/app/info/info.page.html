@@ -16,22 +16,50 @@
           <ion-row>
             <ion-col size="2" align-self: stretch></ion-col>
             <ion-col size="8" align-self: stretch>
-              <ion-item>
+              <ion-item *ngIf="value1 != null">
 
                 <ion-label fixed>{{value1}}</ion-label>
                 <ion-input type="number"></ion-input>
               </ion-item>
 
-              <ion-item>
+              <ion-item *ngIf="value2 != null">
 
-                <ion-label fixed>{{value1}}</ion-label>
+                <ion-label fixed>{{value2}}</ion-label>
+                <ion-input type="number"></ion-input>
+
+              </ion-item>
+              <ion-item *ngIf="value3 != null">
+
+                <ion-label fixed>{{value3}}</ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+
+              <ion-item *ngIf="value4 != null">
+
+                <ion-label fixed>{{value4}}</ion-label>
+                <ion-input type="number"></ion-input>
+
+              </ion-item>
+              <ion-item *ngIf="value5 != null">
+
+                <ion-label fixed>{{value5}}</ion-label>
+                <ion-input type="number"></ion-input>
+              </ion-item>
+
+              <ion-item *ngIf="value6 != null">
+
+                <ion-label fixed>{{value6}}</ion-label>
+                <ion-input type="number"></ion-input>
+
+              </ion-item>
+              <ion-item *ngIf="value7 != null">
+
+                <ion-label fixed>{{value7}}</ion-label>
                 <ion-input type="number"></ion-input>
 
               </ion-item>
               <div><br /></div>
-              <ion-button (click)="login()" expand="block">Login</ion-button>
-              <ion-button expand="block" color="secondary" href="/register" routerDirection="forward">Register
-              </ion-button>
+              <ion-button (click)="calculate()" expand="block">Calculate</ion-button>
             </ion-col>
             <ion-col size="2" align-self: stretch></ion-col>
           </ion-row>
