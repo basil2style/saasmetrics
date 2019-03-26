@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router, NavigationExtras } from '@angular/router';
+
 import { DataService } from '../data.service';
 // import {DataProvider} from ''
 @Component({
@@ -9,7 +11,7 @@ import { DataService } from '../data.service';
 export class HomePage {
 
   homeLists: any;
-  constructor(public data: DataService) {
+  constructor(private router: Router, public data: DataService) {
     console.log("Testing")
     // console.log(this.homeLists)
   }
@@ -19,7 +21,13 @@ export class HomePage {
   }
 
   itemClicked(item): void {
-    console.log("Clicked on ");
-    console.log(item);
+    // console.log("Clicked on ");
+    // console.log(item);
+    let navigationExtras: NavigationExtras = {
+      state: {
+        item: item
+      }
+    };
+    this.router.navigate(['info'], navigationExtras);
   }
 }
